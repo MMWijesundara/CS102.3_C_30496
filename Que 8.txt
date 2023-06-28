@@ -1,0 +1,110 @@
+Statement 1:
+
+The format specifier** **%s** is used, which briefly means, “expect a string value”. In this case, the string “blue” is passed on to %s. **\n** simply means “Go to next line”; get the cursor to beginning of the next line. This is used because the program has multiple outputs which needed to be displayed line by line. 
+Therefore, the output will look like this :
+
+```c
+The color: blue
+```
+**Format specifiers can be seen in printf and scanf functions to represent the format/type of input or output data. Percentage mark ( **% )** indicates the beginning of a format specifier. Some commonly used format specifiers : 
+
+- %d - integer
+- %f - float
+- %s - string
+
+Statement 2:  
+
+The output is : 
+```c
+First number: 12345
+```
+'%d' format specifier is used in printf  and scanf functions to accept integers. 
+
+Statement 3:
+Here, the “04” is used to indicate the minimum  width the output should have. Take a look at this the output.
+ 
+```c
+Second number: 0025
+```
+
+To better understand this concept , we can use this :
+
+```c
+   1.printf("Second number: %04d\n", 25);
+   2.printf("Second number: %03d\n", 25);
+   3.printf("Second number: %02d\n", 25);
+   4.printf("Second number: %01d\n", 25);
+   5.printf("Second number: %d\n", 25);
+```
+
+Output : 
+Second number: 0025
+Second number: 025
+Second number: 25
+Second number: 25
+Second number: 25
+
+On the first line, the output will be 0025 . %04d indicates that the minimum width should be 4; Since there’re already 2 digits on the integer “25” , other two digits will be occupied with 0 s. 
+Take the second line, output will be 025  ; min width = 3 digits , so one 0 will be added.
+On the third line, there’s already two digits on “25”, which fulfills the minimum requirement of 2 digits. Therefore, no extra 0s will be added.
+4th line, “25” exceeds the minimum requirement of 1 digit ( %01d ) . Therefore, no 0 s will be added. Same goes for 5th line also.
+
+Statement 4: 
+%i acts similar to %d except, %i can handle octal and hexadecimal inputs as well. 
+
+```c
+Third number: 1234
+```
+
+Statement 5: 
+Here , **%3.2f** 
+
+- 3 - Indicates the total width. (Excluding the space used for decimal point )
+- 2 - Indicates the number of decimal places.
+
+Therefore, the output is for the code is 
+
+```c
+Float number: 3.14
+```
+
+Statements 6. / 7. / 8. 
+
+```c
+//6. %x is used for printing hexadecimal values
+Hexadecimal: ff //ff is hexadecimal representation of 255.
+
+//7. %o is used for octal outputs
+Octal: 377 //377 is the octal value of 255.
+
+/*8. %u is used for printing unsigned values. Unsigned values are values that aren't 
+negative */
+Unsigned value: 150
+```
+
+Statement 9 : 
+**%%** is the escape sequence** which is used to dislpay a singal percentage character (**%**).
+
+      Therefore, the output is
+
+```c
+Just print the percentage sign %
+```
+
+As you know, the % is used to indicate the beginning of a format specifier. But here, in order to get a percentage sign as output, two adjacent percentage signs (%%) should be used. 
+
+Moreover, number 10 will not be displayed because there’s no format specifier that accepts the value 10. To display the number 10, you should add %d format specifier like this, along with the two other percentage marks ( %% ) .
+
+```c
+printf("Just print the percentage sign %%%d\n", 10);
+//output
+Just print the percentage sign %10
+```
+
+** Escape sequences are combination of character/characters used to represent actions which cannot be easily displayed directly. Some commonly used escape sequences are : 
+
+- \n - gets the cursor to beginning of the next line.
+- \t - inserts a horizontal tab space.
+- \a - used to get an audio alert aling with the output.
+
+backslash ( \ ), marks the beginning of an escape sequence.
