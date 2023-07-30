@@ -3,7 +3,7 @@ int main()
 {
     int arr1[3][3],arr2[3][3],matsum[3][3],r,c,i=1;
 
-//void takeinputs(int arr[3][3])
+//try: void takeinputs(int arr[3][3])
 
 
     printf("Enter elements for Array 1\n");
